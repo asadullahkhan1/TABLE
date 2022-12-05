@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>TABLE</h2>
+    <form onsubmit="Table(); return false">
+        <label for="table">Enter a number</label>
+        <input type="number" id="table" name="input" placeholder="enteer a number"><br>
+        <button id="submit">Check</button>
+
+    </form>
+  <h2 id="result"></h2>
+  
+  <script>
+        function Table(){
+                let input = +document.getElementById('table').value; 
+            //document.querySelector("#result").innerHTML =""
+                for (let i = 0 ; i < 10 ; i++) {
+            document.querySelector("#result").innerHTML += `<h5> ${input} x ${i+1} = ${ input * (i+1)} </h5>`;
+                }
+        }
+    </script>
+</body>
